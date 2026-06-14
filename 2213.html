@@ -1,1 +1,235 @@
-My e-Portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YANGMUHAN - e-Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* SDG 3 Green */
+            --secondary-color: #2E7D32;
+            --bg-color: #F9FBE7;
+            --text-color: #333;
+            --card-bg: #FFFFFF;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover { color: #C8E6C9; }
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .btn:hover { background: var(--secondary-color); }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .tag {
+            background: #E8F5E9;
+            color: var(--secondary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            nav a { display: block; margin: 10px 0; }
+            header { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <h1>YANGMUHAN</h1>
+        <p>A207373 | Faculty of Information Science and Technology (FTSM)</p>
+        <p>Instructor: Dr. Izwan</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#labs">Labs</a>
+        <a href="#projects">Projects</a>
+        <a href="#reflection">Reflection</a>
+    </nav>
+
+    <section id="about">
+        <h2>About My Project</h2>
+        <div class="card">
+            <h3>SDG 3: Good Health and Well-being</h3>
+            <p><strong>Goal:</strong> Ensuring healthy lives and promoting well-being at all ages is essential to sustainable development.</p>
+            <p><strong>My Motivation:</strong> I want to build a fully connected health tracker that encourages users to stay active by seamlessly tracking their steps and sharing achievements with the community.</p>
+        </div>
+    </section>
+
+    <section id="labs">
+        <h2>Lab Submissions</h2>
+        
+        <div class="card">
+            <h3>Lab 1: UI Implementation</h3>
+            <p>Building the foundational static layout for the health tracking application.</p>
+            <div class="video-container">
+                <iframe src="https://youtu.be/NoiJbSjufL0" allowfullscreen></iframe>
+            </div>
+            <p><strong>Reflection:</strong> Learned the basics of Jetpack Compose to create functional and clean user interfaces.</p>
+        </div>
+
+        <div class="card">
+            <h3>Lab 2 & 3: Interaction & Material Design</h3>
+            <p>Adding interactivity and refining the visual aesthetic using Material 3 guidelines.</p>
+            <div class="video-container">
+                <iframe src="https://youtu.be/NoiJbSjufL0" allowfullscreen></iframe>
+            </div>
+            <p><strong>Reflection:</strong> Improved user experience by implementing proper state hoisting and applying a consistent color scheme.</p>
+        </div>
+
+        <div class="card">
+            <h3>Lab 4 & 5: Navigation & Room Database</h3>
+            <p>Connecting multiple screens and persisting user step data locally.</p>
+            <div class="video-container">
+                <iframe src="https://youtu.be/cqwpeSeUbW4" allowfullscreen></iframe>
+            </div>
+            <p><strong>Reflection:</strong> Successfully mapped out the application flow using Compose Navigation and learned how to save data offline using Room Database.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Major Projects</h2>
+
+        <div class="card">
+            <h3>Project 1: Foundation Application</h3>
+            <p><strong>Problem Statement:</strong> Users need a centralized place to view their health data across multiple beautifully designed screens without losing context.</p>
+            <div class="video-container">
+                <iframe src="https://youtu.be/ezrMR7nGngg" allowfullscreen></iframe>
+            </div>
+            <p><strong>Lessons Learned:</strong> Mastered ViewModel to share state across 5 distinct screens, ensuring a seamless user experience.</p>
+            <a href="https://github.com/a207373-YANGMUHAN/A207373_YANGMUHAN_CikguIzwan_Project1" class="btn" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="card">
+            <h3>Project 2: Advanced Data, APIs, & Sensor Integration</h3>
+            <p><strong>Problem Statement:</strong> A modern health app needs to interact with the real world. By adding hardware sensors, cloud backups, and live internet data, the app becomes a fully-fledged tracking ecosystem.</p>
+            <div class="video-container">
+                <iframe src="https://youtu.be/9K613tw9VLk" allowfullscreen></iframe>
+            </div>
+            <p><strong>Features Implemented:</strong></p>
+            <ul>
+                <li><strong>Web API:</strong> Fetching daily health tips using Retrofit.</li>
+                <li><strong>Hardware Sensor:</strong> Tracking movement via the device's Accelerometer.</li>
+                <li><strong>Local Persistence:</strong> Saving steps permanently via Room.</li>
+                <li><strong>Cloud Integration:</strong> Backing up user data to Firebase Firestore.</li>
+            </ul>
+            <p><strong>Lessons Learned:</strong> Successfully integrated complex external libraries and hardware APIs without freezing the main UI thread. Understanding Coroutines was crucial here.</p>
+            <a href="https://github.com/a207373-YANGMUHAN/A207373_YANGMUHAN_Cikguzwan_Project2" class="btn" target="_blank">View on GitHub</a>
+        </div>
+    </section>
+
+    <section id="reflection">
+        <h2>Reflection & Skills</h2>
+        <div class="card">
+            <h3>Learning Journey</h3>
+            <p>This course has been an incredible journey. Starting from basic static UI in Lab 1 to building a fully persistent, cloud-connected app using hardware sensors in Project 2, I have drastically improved my understanding of modern Android development. Overcoming the challenges of Retrofit integration and Firebase configuration taught me how to effectively troubleshoot and read documentation. I am proud to have built an app that aligns with SDG 3 and has real-world applicability.</p>
+            
+            <h3>Tech Stack & Skills</h3>
+            <div class="tags">
+                <span class="tag">Kotlin</span>
+                <span class="tag">Jetpack Compose</span>
+                <span class="tag">Room Database</span>
+                <span class="tag">Retrofit API</span>
+                <span class="tag">Firebase Firestore</span>
+                <span class="tag">Accelerometer Sensor</span>
+                <span class="tag">Coroutines</span>
+            </div>
+            
+            <h3 style="margin-top: 2rem;">Resources</h3>
+            <p>APIs used: ZenQuotes REST API. Libraries: Retrofit, Gson, Firebase BoM, Room KSP. Acknowledgment: Utilized AI assistance for code structuring, debugging, and generating this e-Portfolio HTML format.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 YANGMUHAN (A207373) | Mobile Application Programming</p>
+    </footer>
+
+</body>
+</html>
